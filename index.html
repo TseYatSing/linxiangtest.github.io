@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>邻想官方网站测试版 1.0V</title>
+    <style>
+      body {
+        margin: 0;
+        height: 100vh;
+        background-color: #eee;
+      }
+      /* * {
+        border: 1px solid black;
+      } */
+      .yinYing {
+        box-shadow: rgb(0 0 0 / 20%) 0px 2px 1px -1px,
+          rgb(0, 0, 0 / 14%) 0px 1px 1px 0px, rgb(0, 0, 0 / 12%) 0px 1px 3px 0px;
+      }
+      .flex {
+        display: flex;
+      }
+      .baiSe {
+        background-color: white;
+      }
+      .flex1 {
+        flex: 1;
+      }
+      .column {
+        flex-direction: column;
+      }
+      .mg8 {
+        margin: 8px;
+      }
+      .mgr8 {
+        margin-right: 8px;
+      }
+      .mgt8 {
+        margin-top: 8px;
+      }
+      .mgt20 {
+        margin-top: 20px;
+      }
+      .daoHang {
+        padding: 10px 20px;
+        border-bottom: 1px solid rgb(190, 190, 190);
+        font-size: 14px;
+        color: #666;
+      }
+      .overlay-img {
+        position: absolute; /* 绝对定位 */
+        top: 0;
+        left: 0;
+        width: 100%; /* 宽度设置为100%以覆盖flex子项 */
+        height: 100%; /* 高度设置为100%以覆盖flex子项 */
+        object-fit: cover; /* 保持图片的宽高比，同时填充整个容器 */
+        z-index: 1; /* 确保图片在其他内容之上 */
+      }
+      .flex-item {
+        position: relative; /* 使得子元素可以使用绝对定位 */
+      }
+      /* 当屏幕宽度小于600px时要改变的CSS */
+      @media (max-width: 600px) {
+        .ceBian {
+          display: none;
+        }
+        .neiRong {
+          flex-direction: column;
+        }
+        .shuJuQu {
+          flex-direction: column;
+        }
+        .youQu {
+          margin-left: 8px;
+        }
+        .shuJu {
+          margin: 0 0 8px;
+          flex: auto;
+        }
+      }
+      .neiRong::-webkit-scrollbar {
+        display: none;
+      }
+    </style>
+  </head>
+  <body class="flex">
+    <!-- 侧边栏 -->
+    <div style="width: 200px; z-index: 3" class="ceBian baiSe yinYing">
+      <!-- 头像栏 -->
+      <div
+        style="
+          align-items: center;
+          justify-content: center;
+          border-bottom: 1px solid #999;
+        "
+        class="flex"
+      >
+        <img src="/images/logo.jpg" width="60xp" height="60px" alt="" />
+        <div style="margin-left: 10px">邻想官方网站测试版</div>
+      </div>
+      <!-- 导航栏 -->
+      <div class="flex1">
+        <div class="daoHang">1</div>
+        <div class="daoHang">2</div>
+        <div class="daoHang">3</div>
+        <div class="daoHang">4</div>
+        <div class="daoHang">5</div>
+        <div class="daoHang">6</div>
+      </div>
+    </div>
+    <!-- 主区域 -->
+    <div class="flex flex1 column">
+      <!-- 头部栏 -->
+      <div style="height: 60px; z-index: 2" class="baiSe yinYing"></div>
+      <!-- 内容区 -->
+      <div style="overflow: auto" class="neiRong flex1 flex">
+        <!-- 左区 -->
+        <div style="flex: 3" class="flex column mg8">
+          <!-- 数据区 -->
+          <div class="flex shuJuQu">
+            <!-- 数据块 -->
+            <div
+              style="height: 200px"
+              class="flex1 shuJu baiSe mgr8 yinYing flex-item"
+            >
+              <img class="overlay-img" src="/images/bao.jpg" />
+            </div>
+            <div
+              style="height: 200px"
+              class="flex1 shuJu baiSe mgr8 yinYing flex-item"
+            >
+              <img class="overlay-img" src="/images/yiFu.jpg" />
+            </div>
+            <div
+              style="height: 200px"
+              class="flex1 shuJu baiSe mgr8 yinYing flex-item"
+            >
+              <img class="overlay-img" src="/images/kaFeiBei.jpg" />
+            </div>
+            <div
+              style="height: 200px"
+              class="flex1 shuJu baiSe yinYing flex-item"
+            >
+              <img class="overlay-img" src="/images/xing.jpg" />
+            </div>
+          </div>
+          <!-- 列表区 -->
+          <div class="flex column">
+            <!-- 列表项 -->
+            <div style="height: 350px" class="baiSe mgt20 yinYing flex-item">
+              <img class="overlay-img" src="/images/fang4.jpg" />
+            </div>
+            <div style="height: 350px" class="baiSe mgt20 yinYing flex-item">
+              <img class="overlay-img" src="/images/fang1.jpg" />
+            </div>
+            <div style="height: 350px" class="baiSe mgt20 yinYing flex-item">
+              <img class="overlay-img" src="/images/fang2.jpg" />
+            </div>
+            <div style="height: 350px" class="baiSe mgt20 yinYing flex-item">
+              <img class="overlay-img" src="/images/fang3.jpg" />
+            </div>
+            <div style="height: 350px" class="baiSe mgt20 yinYing flex-item">
+              <img class="overlay-img" src="/images/fang5.jpg" />
+            </div>
+            <div style="height: 350px" class="baiSe mgt20 yinYing flex-item">
+              <img class="overlay-img" src="/images/fang6.jpg" />
+            </div>
+          </div>
+        </div>
+        <!-- 右区 -->
+        <div style="flex: 1" class="youQu flex column mgr8 mgt8">
+          <!-- 提示区 -->
+          <div style="height: 150px" class="baiSe yinYing"></div>
+          <!-- 消息区 -->
+          <div style="height: 300px" class="baiSe mgt8 yinYing">
+            <div style="margin-left: 10px">租房咨询+vx:chenhanyu13</div>
+            <div style="margin-left: 10px">招聘前端后端+vx:zhizhuxia139218</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
